@@ -5,45 +5,16 @@ Install Docker: https://docs.docker.com/get-docker/
 To run: 
 `docker compose up` 
 
-To test interactivity: 
+# Commands
 
-`curl --location --request POST 'localhost:8545' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "jsonrpc": "2.0",
-    "id": 1,
-    "method": "admin_peers",
-    "params": []
-}'`
-
-`curl --location --request POST 'localhost:8545' \. 
---header 'Content-Type: application/json' \. 
---data-raw '{. 
-    "jsonrpc": "2.0",  
-    "id": 2,  
-    "method": "eth_blockNumber",  
-    "params": []. 
-}'`  
-
-`curl --location --request POST 'localhost:8545' \  
---header 'Content-Type: application/json' \. 
---data-raw '{. 
-    "jsonrpc": "2.0",  
-    "id": 3,  
-    "method": "eth_accounts",  
-    "params": []. 
-}'`  
-
-`curl --location --request POST 'localhost:8545' \. 
---header 'Content-Type: application/json' \. 
---data-raw '{.  
-    "jsonrpc": "2.0",  
-    "id": 4,  
-    "method": "eth_getBalance",  
-    "params": [. 
-        "{account_address}",  
-        "latest". 
-    ]. 
-}'`. 
+Test connectivity: make check_connect
+Get the latest block number: make get_latest_block
+Get account addresses: make get_addresses
+Get balance: make get_balance address={address}
+Get primary balance: make get_primary_balance
+Create new account: make create_account
+Unlock account: `make unlock_account address={address}`
+Send: `make send from={from} to={to} value={value}`
+Get transaction info: `make get_transaction hash={hash}`
 
 https://medium.com/scb-digital/running-a-private-ethereum-blockchain-using-docker-589c8e6a4fe8
