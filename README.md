@@ -1,9 +1,11 @@
 # Getting started
 
-Install Docker
+Install Docker: https://docs.docker.com/get-docker/
 
 To run: 
 `docker compose up` 
+
+To test interactivity: 
 
 `curl --location --request POST 'localhost:8545' \
 --header 'Content-Type: application/json' \
@@ -44,4 +46,4 @@ To run:
     ]
 }'`
 
-More: https://medium.com/scb-digital/running-a-private-ethereum-blockchain-using-docker-589c8e6a4fe8
+https://medium.com/scb-digital/running-a-private-ethereum-blockchain-using-docker-589c8e6a4fe8
