@@ -5,7 +5,7 @@ services:
     hostname: geth-bootnode
     env_file:
       - .env
-    image: geth-client
+    image: ethereum/client-go
     build:
       context: .
       args:
@@ -23,7 +23,7 @@ services:
     hostname: geth-rpc-endpoint
     env_file:
       - .env
-    image: geth-client
+    image: ethereum/client-go
     depends_on:
       - geth-bootnode    
     command:
@@ -44,7 +44,7 @@ services:
     hostname: geth-miner
     env_file:
       - .env
-    image: geth-client
+    image: ethereum/client-go
     depends_on:
       - geth-bootnode
     command:
